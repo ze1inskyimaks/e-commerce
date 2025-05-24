@@ -6,6 +6,7 @@ public class CompanyDto
 {
     [Required]
     public required string Name { get; set; }
+    [Required]
     public required Guid OwnerId { get; set; }
     [Range(1,200)]
     public string? Description { get; set; }
