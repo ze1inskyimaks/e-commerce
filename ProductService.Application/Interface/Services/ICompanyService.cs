@@ -8,6 +8,8 @@ public interface ICompanyService
 {
     public Task<Result<Company>> CreateCompany(CompanyDto company, Guid ownerId);
     public Task<Result<Company>> ChangeCompany(Guid companyId, CompanyDto company, Guid ownerId);
+    public Task<Result<Company>> AddWorkerToCompany(Guid companyId, Guid workerId);
     public Task<Result> DeleteCompany(Guid companyId, Guid ownerId);
+    public Task<Company?> GetCompanyByWorkerId(Guid workerId);
     public Task<Company?> GetCompanyById(Guid companyId);
 }

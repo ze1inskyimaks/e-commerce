@@ -8,7 +8,8 @@ public class Company
     [Required]
     public required string Name { get; set; }
     public required Guid OwnerId { get; set; }
-    [Range(1,200)]
+    [Range(1, 200)] 
+    public List<Guid?> Workers { get; set; } = new();
     public string? Description { get; set; }
     public List<Guid>? ProductIds { get; set; }
     public List<Product>? Products { get; set; }

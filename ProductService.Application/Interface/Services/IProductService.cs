@@ -6,7 +6,7 @@ namespace ProductService.Application.Interface.Services;
 
 public interface IProductService
 {
-    public Task<Result<Product>> CreateProduct(ProductDto product);
+    public Task<Result<Product>> CreateProduct(ProductDto product, string nameOfCategory, Guid workerId);
     public Task<Result<Product>> ChangeProduct(Guid id, ProductDto product);
     public Task<Result> DeleteProduct(Guid id);
     public Task<Product?> GetProductById(Guid id);
